@@ -82,6 +82,15 @@
       linear-gradient(100deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0.1) 55%);}
   .corte-band .band-inner{position:relative;z-index:2;padding:96px 0;}
 
+  /* marquee gallery */
+  .marquee-section{padding:0;overflow:hidden;background:var(--ink-950);}
+  .marquee-track{display:flex;width:max-content;animation:marquee-scroll 42s linear infinite;}
+  .marquee-track img{height:280px;width:auto;flex-shrink:0;object-fit:cover;margin-right:6px;}
+  .marquee-section:hover .marquee-track{animation-play-state:paused;}
+  @keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (max-width:760px){.marquee-track img{height:180px;}}
+  @media (prefers-reduced-motion: reduce){.marquee-track{animation:none;}}
+
   /* buttons */
   .btn{padding:13px 24px;border-radius:2px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;letter-spacing:0.02em;}
   .btn.primary{background:var(--gold-600);color:var(--ink-950);}
@@ -219,6 +228,31 @@
   <div class="wrap band-inner contact-cta">
     <h2 style="color:var(--gold-300);">Descubre el arte de la sastrería personalizada con Mario Vidal.</h2>
     <a class="btn primary" href="contacto.html">Solicitar cita</a>
+  </div>
+</section>
+
+<section class="marquee-section">
+  <div class="marquee-track">
+    <img src="assets/img/taller01.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller02.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller03.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller04.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller05.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller06.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller07.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller08.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller09.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller10.jpg" alt="Galería taller Mario Vidal Sastrería">
+    <img src="assets/img/taller01.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller02.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller03.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller04.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller05.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller06.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller07.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller08.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller09.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+    <img src="assets/img/taller10.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
   </div>
 </section>
 
