@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — Sastrería Mario Vidal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-950:#0E0D0B; --ink-900:#151311; --ink-700:#3A3630; --ink-500:#6B655B;
+    --paper-50:#FAF7F1; --paper-100:#F1EBDF; --paper-200:#E4DAC5;
+    --gold-300:#F5EEC7; --gold-400:#EAD79A; --gold-500:#D9B06E; --gold-600:#C9A944; --gold-700:#A6812E;
+    --line:rgba(14,13,11,0.12); --surface:#FFFFFF;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper-50:#121110; --paper-100:#1A1815; --paper-200:#26221C;
+      --ink-900:#F2EEE3; --ink-700:#C9C2B2; --ink-500:#948C7C;
+      --line:rgba(242,238,227,0.14); --surface:#1C1A16;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper-50:#121110; --paper-100:#1A1815; --paper-200:#26221C;
+    --ink-900:#F2EEE3; --ink-700:#C9C2B2; --ink-500:#948C7C;
+    --line:rgba(242,238,227,0.14); --surface:#1C1A16;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper-50);color:var(--ink-900);font-family:"Lora", Georgia, serif;-webkit-font-smoothing:antialiased;line-height:1.6;}
+  h1,h2{font-family:"Cormorant Garamond", Georgia, serif;font-weight:600;margin:0;}
+  a{color:inherit;}
+  .eyebrow{font-family:"IBM Plex Mono", ui-monospace, monospace;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-700);font-weight:500;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
+  @media (max-width:640px){.wrap{padding:0 18px;}}
+  header{position:sticky;top:0;z-index:50;background:var(--paper-50);border-bottom:1px solid var(--line);}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:20px;}
+  .word{display:flex;flex-direction:column;line-height:1.05;text-decoration:none;}
+  .word .name{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:1.5rem;color:var(--ink-900);white-space:nowrap;}
+  .word .sub{font-family:"IBM Plex Mono",monospace;font-size:0.6rem;letter-spacing:0.18em;color:var(--ink-500);margin-top:4px;text-transform:uppercase;}
+  nav.primary{display:flex;gap:2px;align-items:center;}
+  nav.primary a{font-size:0.86rem;font-weight:600;letter-spacing:0.02em;padding:9px 16px;text-decoration:none;color:var(--ink-700);}
+  nav.primary a:hover{color:var(--gold-700);}
+  .call-btn{display:flex;align-items:center;gap:8px;font-size:0.8rem;font-weight:600;padding:10px 18px;border-radius:2px;border:1px solid var(--ink-900);text-decoration:none;color:var(--ink-900);white-space:nowrap;}
+  .call-btn:hover{background:var(--ink-900);color:var(--paper-50);}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:4px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px;}
+  .menu-toggle span{content:"";display:block;width:18px;height:1px;background:var(--ink-900);}
+  @media (max-width:900px){nav.primary{display:none;} .call-btn span.label{display:none;} .menu-toggle{display:flex;}}
+  #mobile-nav{display:none;flex-direction:column;padding:8px 0 18px;border-top:1px solid var(--line);}
+  #mobile-nav.open{display:flex;}
+  #mobile-nav a{padding:10px 0;text-decoration:none;color:var(--ink-700);font-size:0.95rem;}
+
+  .legal{padding:64px 0 88px;}
+  .breadcrumb{display:flex;gap:8px;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:0.74rem;color:var(--ink-500);margin-bottom:26px;letter-spacing:0.03em;}
+  .breadcrumb a{color:var(--ink-500);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--gold-700);}
+  .legal h1{font-size:clamp(1.8rem,3.6vw,2.4rem);max-width:24ch;}
+  .prose{max-width:70ch;margin-top:32px;}
+  .prose h2{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;margin-top:32px;margin-bottom:10px;}
+  .prose h2:first-child{margin-top:0;}
+  .prose p{color:var(--ink-700);margin:0 0 16px;}
+  .prose ul{color:var(--ink-700);padding-left:20px;margin:0 0 16px;}
+  .prose li{margin-bottom:8px;}
+  .prose strong{color:var(--ink-900);}
+
+  footer{padding:56px 0 36px;border-top:1px solid var(--line);}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--line);}
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr 1fr;}}
+  .footer-grid h4{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink-500);margin-bottom:14px;font-weight:700;font-family:"IBM Plex Mono",monospace;}
+  .footer-grid a, .footer-grid p{display:block;font-size:0.92rem;color:var(--ink-700);text-decoration:none;margin-bottom:9px;}
+  .footer-grid a:hover{color:var(--gold-700);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:10px;}
+  .footer-bottom p, .footer-credit{font-size:0.78rem;color:var(--ink-500);margin:0;font-family:"IBM Plex Mono",monospace;}
+  .footer-credit a{color:var(--gold-700);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <a href="index.html" class="word">
+      <span class="name">Mario Vidal</span>
+      <span class="sub">Sastrería · Madrid</span>
+    </a>
+    <nav class="primary">
+      <a href="index.html">Inicio</a>
+      <a href="traje-artesanal.html">Traje Artesanal</a>
+      <a href="traje-made-to-measure.html">Made to Measure</a>
+      <a href="vestuario.html">Vestuario</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a class="call-btn" href="tel:+34616954832"><span class="label">+34 616 954 832</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.getElementById('mobile-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div class="wrap" id="mobile-nav">
+    <a href="index.html">Inicio</a>
+    <a href="traje-artesanal.html">Traje Artesanal</a>
+    <a href="traje-made-to-measure.html">Made to Measure</a>
+    <a href="vestuario.html">Vestuario</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</header>
+
+<section class="legal">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Política de Privacidad</div>
+    <h1>Política de Privacidad</h1>
+    <div class="prose">
+      <h2>Uso y tratamiento de datos de carácter personal</h2>
+      <p>Le informamos que los datos de carácter personal que pudieran proporcionarse a través de este sitio web, así como los que pudiera facilitar en el futuro en el marco de su relación jurídica con esta entidad, serán incorporados a nuestra base de datos.</p>
+      <p>Se informa sobre los siguientes extremos relativos a la protección de datos:</p>
+      <ul>
+        <li><strong>Responsable del tratamiento:</strong> somos responsables de los datos recogidos en el formulario correspondiente.</li>
+        <li><strong>Necesidad del tratamiento:</strong> la comunicación de sus datos a través del formulario correspondiente es obligatoria para que podamos contactar.</li>
+        <li><strong>Destinatarios:</strong> contratamos con alguna entidad que presta servicios como los de mantenimiento y hosting, a través de contratos de encargo del tratamiento, para dar soporte a los fines de tratamiento indicados.</li>
+        <li><strong>Plazo de conservación de datos:</strong> conservaremos sus datos mientras se mantenga el tratamiento y no solicite la supresión de los mismos.</li>
+        <li><strong>Derechos:</strong> podrá ejercitar los derechos de acceso, rectificación, supresión, limitación al tratamiento, oposición, portabilidad y derecho a no ser objeto de una decisión basada únicamente en el tratamiento automatizado, mediante comunicación escrita al domicilio indicado en el aviso legal; también puede revocar su consentimiento sin efectos retroactivos, oponerse a la recepción de comunicaciones comerciales publicitarias por email u otros medios equivalentes, y presentar una reclamación ante la autoridad de control, en España, la Agencia Española de Protección de Datos.</li>
+        <li><strong>Modificación de la política de privacidad:</strong> nos reservamos el derecho a modificar esta Política de Privacidad, de acuerdo a nuestro propio criterio o motivado por un cambio doctrinal de la autoridad competente en Protección de Datos, legislativo o jurisprudencial. El uso de la web después de dichos cambios implicará la aceptación de éstos.</li>
+        <li><strong>Legislación aplicable:</strong> cualquier controversia que se derive del uso de este sitio será regida, interpretada y sometida de acuerdo con las leyes de España.</li>
+      </ul>
+      <h2>Finalidades del tratamiento y legitimación</h2>
+      <p>Gestionar, administrar y prestarle los servicios o productos que solicite y, en su caso, para el cumplimiento y ejecución de los contratos que pudiera celebrar, conocer mejor sus gustos y adecuar los servicios a sus preferencias.</p>
+      <p>Enviarle, por correo postal, correo electrónico y otros medios de comunicación electrónica equivalente, comunicaciones comerciales y publicitarias sobre nuestros productos y/o servicios.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Mario Vidal</h4>
+        <p style="color:var(--ink-500);font-size:0.9rem;">Sastrería artesanal y diseño de vestuario histórico en Madrid.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="traje-artesanal.html">Traje Artesanal</a>
+        <a href="traje-made-to-measure.html">Made to Measure</a>
+        <a href="vestuario.html">Vestuario</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="cookies.html">Política de Cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sastrería Mario Vidal</p>
+      <p class="footer-credit">Web diseñada por <a href="https://renuevasmart.com" target="_blank" rel="noopener">Renueva Smart</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
