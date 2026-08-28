@@ -72,6 +72,14 @@
   .hero p.lede{margin:20px 0 0;max-width:46ch;font-size:1.08rem;color:#E4DDC9;}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
 
+  /* corte clásico band */
+  .corte-band{position:relative;overflow:hidden;background:var(--ink-950);}
+  .corte-band .band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;}
+  .corte-band .band-scrim{position:absolute;inset:0;z-index:1;background:
+      linear-gradient(180deg, rgba(14,13,11,0.72) 0%, rgba(14,13,11,0.52) 40%, rgba(14,13,11,0.82) 100%),
+      linear-gradient(100deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.08) 55%);}
+  .corte-band .band-inner{position:relative;z-index:2;padding:96px 0;}
+
   /* buttons */
   .btn{padding:13px 24px;border-radius:2px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;letter-spacing:0.02em;}
   .btn.primary{background:var(--gold-600);color:var(--ink-950);}
@@ -182,14 +190,18 @@
   <div class="hero-scrim"></div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Sastrería en Madrid</p>
-    <h1 style="margin-top:16px;font-size:clamp(2.1rem, 4.8vw, 3.6rem);max-width:22ch;">Un corte clásico y atemporal</h1>
-    <p style="margin-top:20px;max-width:60ch;font-size:1.08rem;color:var(--ink-700);">Nuestro enfoque se centra en respetar las técnicas de confección propias de la época correspondiente, cuidando cada detalle para lograr una autenticidad única. Desde siluetas acordes al periodo hasta elementos como bolsillos, solapas, cortes, ojales y picados a mano, todo está pensado para capturar la esencia del estilo histórico.</p>
+<section class="corte-band">
+  <video class="band-bg" autoplay muted loop playsinline aria-label="Mario Vidal vistiendo un traje en el taller">
+    <source src="assets/video/mario-se-viste.mp4" type="video/mp4">
+  </video>
+  <div class="band-scrim"></div>
+  <div class="wrap band-inner">
+    <p class="eyebrow" style="color:var(--gold-400);">Sastrería en Madrid</p>
+    <h1 style="margin-top:16px;font-size:clamp(2.1rem, 4.8vw, 3.6rem);max-width:22ch;color:var(--gold-300);">Un corte clásico y atemporal</h1>
+    <p style="margin-top:20px;max-width:60ch;font-size:1.08rem;color:#E4DDC9;">Nuestro enfoque se centra en respetar las técnicas de confección propias de la época correspondiente, cuidando cada detalle para lograr una autenticidad única. Desde siluetas acordes al periodo hasta elementos como bolsillos, solapas, cortes, ojales y picados a mano, todo está pensado para capturar la esencia del estilo histórico.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
-      <a class="btn primary" href="contacto.html">Pedir cita previa</a>
-      <a class="btn ghost-light" href="traje-artesanal.html">Ver los trajes</a>
+      <a class="btn on-dark" href="contacto.html">Pedir cita previa</a>
+      <a class="btn ghost" href="traje-artesanal.html">Ver los trajes</a>
     </div>
   </div>
 </section>
