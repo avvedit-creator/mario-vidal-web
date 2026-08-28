@@ -82,14 +82,21 @@
       linear-gradient(100deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0.1) 55%);}
   .corte-band .band-inner{position:relative;z-index:2;padding:96px 0;}
 
-  /* marquee gallery */
-  .marquee-section{padding:0;overflow:hidden;background:var(--ink-950);}
-  .marquee-track{display:flex;width:max-content;animation:marquee-scroll 42s linear infinite;}
-  .marquee-track img{height:280px;width:auto;flex-shrink:0;object-fit:cover;margin-right:6px;}
-  .marquee-section:hover .marquee-track{animation-play-state:paused;}
-  @keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media (max-width:760px){.marquee-track img{height:180px;}}
-  @media (prefers-reduced-motion: reduce){.marquee-track{animation:none;}}
+  /* hover-swap photo grid */
+  .photo-grid-section{padding:0;background:var(--ink-950);}
+  .gallery-row{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;}
+  .gallery-row + .gallery-row{margin-top:2px;}
+  .gallery-row.vertical .gallery-tile{aspect-ratio:533/800;}
+  .gallery-row.horizontal .gallery-tile{aspect-ratio:3/2;}
+  .gallery-tile{position:relative;overflow:hidden;background:var(--ink-900);}
+  .gallery-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.6s ease;}
+  .gallery-tile img.tile-hover{opacity:0;}
+  .gallery-tile:hover img.tile-default{opacity:0;}
+  .gallery-tile:hover img.tile-hover{opacity:1;}
+  @media (prefers-reduced-motion: reduce){.gallery-tile img{transition:none;}}
+  @media (max-width:760px){
+    .gallery-row{grid-template-columns:repeat(3,1fr);}
+  }
 
   /* buttons */
   .btn{padding:13px 24px;border-radius:2px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;letter-spacing:0.02em;}
@@ -231,28 +238,47 @@
   </div>
 </section>
 
-<section class="marquee-section">
-  <div class="marquee-track">
-    <img src="assets/img/taller01.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller02.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller03.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller04.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller05.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller06.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller07.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller08.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller09.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller10.jpg" alt="Galería taller Mario Vidal Sastrería">
-    <img src="assets/img/taller01.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller02.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller03.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller04.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller05.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller06.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller07.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller08.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller09.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
-    <img src="assets/img/taller10.jpg" alt="Galería taller Mario Vidal Sastrería" aria-hidden="true">
+<section class="photo-grid-section">
+  <div class="gallery-row vertical">
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller01.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-v1.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller02.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-v2.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller03.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-v3.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller04.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-v4.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller06.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-v5.jpg" alt="" aria-hidden="true">
+    </div>
+  </div>
+  <div class="gallery-row horizontal">
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller05.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-h1.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller08.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-h2.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller09.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-h3.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile">
+      <img class="tile-default" src="assets/img/taller10.jpg" alt="Galería taller Mario Vidal Sastrería">
+      <img class="tile-hover" src="assets/img/gallery-alt-h4.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gallery-tile"></div>
   </div>
 </section>
 
