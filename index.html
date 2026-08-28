@@ -93,7 +93,7 @@
   /* intro / corte clásico */
   .intro-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
   @media (max-width:820px){.intro-grid{grid-template-columns:1fr;gap:32px;}}
-  .intro-grid img{border-radius:2px;}
+  .intro-grid img, .intro-grid video{border-radius:2px;width:100%;display:block;}
   .intro-grid p{font-size:1.08rem;color:var(--ink-700);max-width:52ch;}
 
   /* trajes */
@@ -188,7 +188,9 @@
 
 <section>
   <div class="wrap intro-grid">
-    <img src="assets/img/taller01.jpg" alt="Galería del taller Mario Vidal Sastrería">
+    <video autoplay muted loop playsinline aria-label="Mario Vidal trabajando en el taller">
+      <source src="assets/video/mv-trabaja.mp4" type="video/mp4">
+    </video>
     <div>
       <p class="eyebrow">Nuestra sastrería en Madrid</p>
       <h2 style="margin:16px 0 20px;font-size:clamp(1.6rem,3vw,2.2rem);">Elegancia, distinción y un servicio cercano</h2>
