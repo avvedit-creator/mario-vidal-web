@@ -77,7 +77,7 @@
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
 
   /* corte clásico band */
-  .corte-band{position:sticky;top:0;overflow:hidden;background:var(--ink-950);}
+  .corte-band{position:sticky;top:0;overflow:hidden;background:var(--ink-950);min-height:100vh;display:flex;align-items:center;}
   .corte-band .band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;}
   .corte-band .band-scrim{position:absolute;inset:0;z-index:1;background:
       linear-gradient(180deg, rgba(14,13,11,0.65) 0%, rgba(14,13,11,0.45) 40%, rgba(14,13,11,0.85) 100%),
@@ -217,7 +217,7 @@
 </section>
 
 <div class="stack-wrap">
-  <section style="position:sticky;top:0;padding:44px 0;background-image:linear-gradient(color-mix(in srgb, var(--paper-50) 82%, transparent), color-mix(in srgb, var(--paper-50) 82%, transparent)), url('assets/img/pexels-vuralyavas-39191026.jpg');background-size:cover;background-position:center;">
+  <section style="position:sticky;top:0;min-height:100vh;display:flex;align-items:center;padding:44px 0;background-image:linear-gradient(color-mix(in srgb, var(--paper-50) 82%, transparent), color-mix(in srgb, var(--paper-50) 82%, transparent)), url('assets/img/pexels-vuralyavas-39191026.jpg');background-size:cover;background-position:center;">
     <div class="wrap intro-grid">
       <video autoplay muted loop playsinline aria-label="Mario Vidal trabajando en el taller">
         <source src="assets/video/mario-vidal1.mp4" type="video/mp4">
