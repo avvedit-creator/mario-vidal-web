@@ -75,9 +75,11 @@
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
 
   /* corte clásico band */
-  .corte-band{position:relative;overflow:hidden;background:var(--ink-950);min-height:50vh;}
+  .corte-band{position:relative;overflow:hidden;background:var(--ink-950);}
   .corte-band .band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;}
-  .corte-band .band-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(14,13,11,0.12) 0%, rgba(14,13,11,0) 30%, rgba(14,13,11,0.18) 100%);}
+  .corte-band .band-scrim{position:absolute;inset:0;z-index:1;background:
+      linear-gradient(180deg, rgba(14,13,11,0.65) 0%, rgba(14,13,11,0.45) 40%, rgba(14,13,11,0.85) 100%),
+      linear-gradient(100deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0.1) 55%);}
 
   /* buttons */
   .btn{padding:13px 24px;border-radius:2px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border:none;cursor:pointer;font-family:"IBM Plex Mono",monospace;letter-spacing:0.02em;}
@@ -193,13 +195,6 @@
   </div>
 </section>
 
-<section class="corte-band">
-  <video class="band-bg" autoplay muted loop playsinline aria-label="Mario Vidal vistiendo un traje en el taller">
-    <source src="assets/video/mario-se-viste.mp4" type="video/mp4">
-  </video>
-  <div class="band-scrim"></div>
-</section>
-
 <section style="padding:44px 0;">
   <div class="wrap intro-grid">
     <video autoplay muted loop playsinline aria-label="Mario Vidal trabajando en el taller">
@@ -243,10 +238,14 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap contact-cta">
-    <p class="eyebrow">Cita previa</p>
-    <h2 style="margin-top:16px;">Descubre el arte de la sastrería personalizada con Mario Vidal.</h2>
+<section class="corte-band">
+  <video class="band-bg" autoplay muted loop playsinline aria-label="Mario Vidal vistiendo un traje en el taller">
+    <source src="assets/video/mario-se-viste.mp4" type="video/mp4">
+  </video>
+  <div class="band-scrim"></div>
+  <div class="wrap band-inner contact-cta">
+    <p class="eyebrow" style="color:var(--gold-400);">Cita previa</p>
+    <h2 style="margin-top:16px;color:var(--gold-300);">Descubre el arte de la sastrería personalizada con Mario Vidal.</h2>
     <a class="btn primary" href="contacto.html">Solicitar cita</a>
   </div>
 </section>
