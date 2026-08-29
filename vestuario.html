@@ -50,6 +50,9 @@
   nav.primary a:hover,nav.primary a.active{color:var(--gold-300);text-decoration:underline;text-underline-offset:4px;}
   .call-btn{display:flex;align-items:center;gap:8px;font-size:calc(0.8rem + 3px);font-weight:700;font-synthesis-weight:auto;padding:10px 18px;border-radius:2px;border:1px solid #E4DDC9;text-decoration:none;color:#E4DDC9;white-space:nowrap;}
   .call-btn:hover{background:#E4DDC9;color:var(--ink-950);}
+  .social-icon{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;color:#E4DDC9;flex-shrink:0;}
+  .social-icon svg{width:20px;height:20px;}
+  .social-icon:hover{color:var(--gold-300);}
   .menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:4px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px;}
   .menu-toggle span{content:"";display:block;width:18px;height:1px;background:var(--ink-900);}
   @media (max-width:900px){nav.primary{display:none;} .call-btn span.label{display:none;} .menu-toggle{display:flex;}}
@@ -125,6 +128,7 @@
       <a href="vestuario.html" class="active">Vestuario</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <a class="social-icon" href="https://www.instagram.com/mariovidal.sastreria" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg></a>
     <a class="call-btn" href="tel:+34616954832"><span class="label">Escríbeme</span></a>
     <button class="menu-toggle" aria-label="Abrir menú" onclick="document.getElementById('mobile-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
